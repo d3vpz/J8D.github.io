@@ -8,7 +8,7 @@ You can check out the demo [here](devpooldotmsi.github.io/J8D/).
 If the demo does not work, use the installation instructions in the docs to use the demo.
 
 # Docs
-Access the docs <a href="./docs.md">here.</a>
+Access the docs <a href="./Docs.md">here.</a>
 
 # Changelog
 ## V1.0 Release
