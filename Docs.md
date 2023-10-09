@@ -93,4 +93,5 @@ const canvas = document.getElementById("mainWindow");
 The `const ctx` statement sets up a variable used as the surface to draw on. It uses `canvas.getContext('2d');` to set its value, '2d' being the type of canvas context.
 ``` javascript
 const ctx = canvas.getContext('2d');
+```
 Lastly, we have `j8_mainWindow=ctx;`. This sets the main window of the J8D library to our `ctx` variable so the library knows what surface to draw on.
