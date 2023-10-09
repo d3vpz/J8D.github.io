@@ -5,7 +5,7 @@ You can check out the demo [here](devpooldotmsi.github.io/J8D/).
 <b>I highly reccomend checking out the docs to learn how to install and use the library.</b>
 
 # Disclaimer
-If the demo does not work, use the installation instructions below to use the demo.
+If the demo does not work, use the installation instructions in the docs to use the demo.
 
 # Changelog
 ## V1.0 Release
