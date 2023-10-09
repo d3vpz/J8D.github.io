@@ -95,3 +95,29 @@ The `const ctx` statement sets up a variable used as the surface to draw on. It 
 const ctx = canvas.getContext('2d');
 ```
 Lastly, we have `j8_mainWindow=ctx;`. This sets the main window of the J8D library to our `ctx` variable so the library knows what surface to draw on.
+
+## Drawing a Rectangle
+
+Let's draw a rectangle outline on our canvas. J8D makes this a lot simpler and less tedious to do.
+
+We can draw a rectangle outline by using the `j8_lineRect();` function.<br>
+This function has 5 parameters. `x, y, width, height, color`.<br>
+
+Add this line of code to the end of your file.
+``` javascript
+j8_lineRect(0,0,50,50,"red");
+```
+Take a geuss on what this does before I tell you.<br>
+Ready? Ok. This draws a red rectangular outline at x-0, y-0 with a width and height of 50.
+Reload the page and you should see the rectangle show up.
+
+Thats great and all, but the outline seems a bit thin. Let's change that. Add this line of code before the `j8_lineRect();` function is called.
+``` javascript
+j8_lineWidth=4;
+```
+This sets the line width of what we draw to 4 pixels. If you reload the page, you should see a thicker outline on the rectangle.
+
+Congratulations! You now know basic shape drawing with J8D. Let's move on to the next part.
+
+## Drawing Other Shapes
+This part of the docs is currently under development.
