@@ -2,7 +2,10 @@
 A small JavaScript library to help others make 8-bit styled games.  
 You can check out the demo [here](devpooldotmsi.github.io/J8D/).
 
-# How to install
+# Disclaimer
+If the demo does not work, use the installation instructions below to use the demo.
+
+# How to install for use and demo
 1. Click on the "code" button
 2. Click "download as zip"
 3. Unzip package
