@@ -48,6 +48,8 @@ document.addEventListener("keyup",(e)=>{
     j8_keys[e.key]=false;
 });
 
+// Point
+
 const j8_plot=(x:number,y:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.beginPath();
@@ -55,6 +57,8 @@ const j8_plot=(x:number,y:number,col:any)=>{
     j8_mainWindow.lineTo(x+1,y+1);
     j8_mainWindow.stroke();
 };
+
+// Rectangles
 
 const j8_lineRect=(x:number,y:number,w:number,h:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
@@ -82,6 +86,8 @@ const j8_ofRect=(x:number,y:number,w:number,h:number,ocol:any,fcol:any)=>{
 const j8_clearRect=(x:number,y:number,w:number,h:number)=>{
     j8_mainWindow.clearRect(x,y,w,h);
 };
+
+// Arcs and Circles
 
 const j8_arc=(x:number,y:number,r:number,sA:number,eA:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
@@ -111,6 +117,8 @@ const j8_ofCircle=(x:number,y:number,r:number,ocol:any,fcol:any)=>{
     j8_mainWindow.fill();
     j8_mainWindow.stroke();
 };
+
+// Line
 
 const j8_line=(x:number,y:number,ex:number,ey:number,col:any)=>{
     j8_mainWindow.lineWidth=j8_lineWidth;

@@ -121,10 +121,22 @@ Congratulations! You now know basic shape drawing with J8D. Let's move on to the
 
 ## Drawing Other Shapes
 ### Rectangles
-There are 3 methods for drawing rectangles:
+There are 4 methods for drawing rectangles:
 1. `j8_lineRect(x,y,w,h,col);` <- Rectangle outline
 3. `j8_fillRect(x,y,w,h,col);` <- Filled rectangle
 4. `j8_ofRect(x,y,w,h,ocol,fcol);` <- Filled rectangle with outline
+5. `j8_clearRect(x,y,w,h);` <- Creates a rectangle that clears all elements inside of it
+### Lines
+There is one method for drawing a line:<br>
+`j8_line(x,y,ex,ey,col);`
+### Circles
+There is 3 methods for drawing circles:
+1. `j8_lineCircle(x,y,r,col);` <- Circle outline
+2. `j8_fillCircle(x,y,r,col);` <- Filled circle
+3. `j8_ofCircle(x,y,r,ocol,fcol);` <- Filled circle with outline
+### Arcs
+There is one method for drawing an arc:<br>
+`j8_arc(x,y,r,sA,eA,col);`
 
 # Extra Sections
 ## Crystals
