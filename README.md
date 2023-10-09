@@ -1,6 +1,6 @@
 # J8D
 A small JavaScript library to help others make 8-bit styled games.
-check out the demo here
+check out the demo here devpooldotmsi.github.io/J8D/
 
 # How to install
 1. Click on the "code" button
