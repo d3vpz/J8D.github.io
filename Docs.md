@@ -121,3 +121,7 @@ Congratulations! You now know basic shape drawing with J8D. Let's move on to the
 
 ## Drawing Other Shapes
 This part of the docs is currently under development.
+
+# Extra Sections
+## Crystals
+You can make modified versions of the library called "crystals". Crystals allow for more additions to the library that haven't been added yet. I currently have no guide for making crystals, but I can give a general overview. Basically, what you do is modify the `lib.ts` file in the `j8d_lib` directory to add new functions and variables.
