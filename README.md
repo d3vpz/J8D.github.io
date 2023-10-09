@@ -10,3 +10,9 @@ If the demo does not work, use the installation instructions below to use the de
 2. Click "download as zip"
 3. Unzip package
 4. Start working. Everything you need is in there. Just change the main html, css, and js files.
+
+# Changelog
+## V1.0 Release
+* Initial Release
+## V1.01
+* Added `j8_fillText()` method
