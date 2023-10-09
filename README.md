@@ -7,9 +7,10 @@ If the demo does not work, use the installation instructions below to use the de
 
 # How to install for use and demo
 1. Click on the "code" button
-2. Click "download as zip"
-3. Unzip package
-4. Start working. Everything you need is in there. Just change the main html, css, and js files.
+<img src="./assets/readme/code.png">
+3. Click "download as zip"
+4. Unzip package
+5. Start working. Everything you need is in there. Just change the main html, css, and js files.
 
 # Changelog
 ## V1.0 Release
