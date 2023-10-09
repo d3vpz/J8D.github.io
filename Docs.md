@@ -122,9 +122,9 @@ Congratulations! You now know basic shape drawing with J8D. Let's move on to the
 ## Drawing Other Shapes
 ### Rectangles
 There are 3 methods for drawing rectangles:
-1. `j8_lineRect();`
-2. `j8_fillRect();`
-3. `j8_ofRect();`
+1. `j8_lineRect(x,y,w,h,col);` <- Rectangle outline
+3. `j8_fillRect(x,y,w,h,col);` <- Filled rectangle
+4. `j8_ofRect(x,y,w,h,ocol,fcol);` <- Filled rectangle with outline
 
 # Extra Sections
 ## Crystals
