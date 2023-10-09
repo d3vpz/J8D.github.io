@@ -24,6 +24,7 @@ Click the `Code` button on the repo.<br>
 Next, click the `Download ZIP` button under the `local` tab.<br>
 <img src="./assets/readme/downloadzip.png"><br>
 Unzip the `J8D-github.io-main.zip` file in your file explorer.<br>
-<img src="./assets/readme/unzip.png">
-Now, open the `main.js` file in your newley created folder.
+<img src="./assets/readme/unzip.png"><br>
+Now, open the `main.js` file in your newley created folder.<br>
+<img src="./assets/readme/mainjs.png">
 
