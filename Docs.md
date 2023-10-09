@@ -44,5 +44,53 @@ Let's get to writing our programs! You should have your `main.js` file opened in
 
 We start off with this code in the demo:
 ``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
 
+j8_mainWindow=ctx;
+
+let y = 50
+let x = 50
+
+function loop() {
+    j8_clearRect(0,0,256,240);
+    j8_setBGColor("lightskyblue");
+    j8_lineWidth=2;
+    j8_ofRect(x,y,10,10,"maroon","red");
+
+    if(j8_keys.ArrowUp){
+        y-=1;
+    }
+    if(j8_keys.ArrowDown){
+        y+=1;
+    }
+    if(j8_keys.ArrowLeft){
+        x-=1;
+    }
+    if(j8_keys.ArrowRight){
+        x+=1;
+    }
+}
+
+j8_setLoopFunction(loop,10);
 ```
+
+Delete everything except for the first 4 lines of code. You should end up with this.
+
+``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+```
+
+Lets's walk through this code.
+
+Firstly, the `const canvas` statement. This sets our canvas variable to the canvas id "mainWindow" from our `index.html` file.
+``` javascript
+const canvas = document.getElementById("mainWindow");
+```
+The `const ctx` statement sets up a variable used as the surface to draw on. It uses `canvas.getContext('2d');` to set its value, '2d' being the type of canvas context.
+``` javascript
+const ctx = canvas.getContext('2d');
+Lastly, we have `j8_mainWindow=ctx;`. This sets the main window of the J8D library to our `ctx` variable so the library knows what surface to draw on.
