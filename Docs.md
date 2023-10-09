@@ -16,3 +16,14 @@ Here is what you will need on your journey:
 If you are ready, let's continue!
 
 ## Section I - Setting Up J8D
+
+To install J8D, please follow the directions below:
+
+Click the `Code` button on the repo.<br>
+<img src="./assets/readme/code.png"><br>
+Next, click the `Download ZIP` button under the `local` tab.<br>
+<img src="./assets/readme/downloadzip.png"><br>
+Unzip the `J8D-github.io-main.zip` file in your file explorer.<br>
+<img src="./assets/readme/unzip.png">
+Now, open the `main.js` file in your newley created folder.
+
