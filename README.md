@@ -10,8 +10,9 @@ If the demo does not work, use the installation instructions below to use the de
 <img src="./assets/readme/code.png">
 2. Click "download as zip"
 <img src="./assets/readme/downloadzip.png">
-4. Unzip package
-5. Start working. Everything you need is in there. Just change the main html, css, and js files.
+3. Unzip package
+<img src="./assets/readme/unzip.png">
+4. Start working. Everything you need is in there. Just change the main html, css, and js files.
 
 # Changelog
 ## V1.0 Release
