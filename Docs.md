@@ -120,7 +120,11 @@ This sets the line width of what we draw to 4 pixels. If you reload the page, yo
 Congratulations! You now know basic shape drawing with J8D. Let's move on to the next part.
 
 ## Drawing Other Shapes
-This part of the docs is currently under development.
+### Rectangles
+There are 3 methods for drawing rectangles:
+1. `j8_lineRect();`
+2. `j8_fillRect();`
+3. `j8_ofRect();`
 
 # Extra Sections
 ## Crystals
