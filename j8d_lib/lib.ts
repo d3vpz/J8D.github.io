@@ -1,8 +1,8 @@
 /* J8D Lite Library */
 /*  By Devpz  */
 
-let j8_mainWindow=null;
-let j8_lineWidth=1;
+let j8_mainWindow;
+let j8_lineWidth:number=1;
 
 let j8_keys={
     "a":false,
@@ -48,15 +48,15 @@ document.addEventListener("keyup",(e)=>{
     j8_keys[e.key]=false;
 });
 
-const j8_plot=(x,y,col)=>{
+const j8_plot=(x:number,y:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.beginPath();
-    j8_maiRnWindow.moveTo(x,y);
+    j8_mainWindow.moveTo(x,y);
     j8_mainWindow.lineTo(x+1,y+1);
     j8_mainWindow.stroke();
 };
 
-const j8_lineRect=(x,y,w,h,col)=>{
+const j8_lineRect=(x:number,y:number,w:number,h:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.beginPath();
     j8_mainWindow.lineWidth=j8_lineWidth;
@@ -64,12 +64,12 @@ const j8_lineRect=(x,y,w,h,col)=>{
     j8_mainWindow.stroke();
 };
 
-const j8_fillRect=(x,y,w,h,col)=>{
+const j8_fillRect=(x:number,y:number,w:number,h:number,col:any)=>{
     j8_mainWindow.fillStyle=col;
     j8_mainWindow.fillRect(x,y,w,h);
 };
 
-const j8_ofRect=(x,y,w,h,ocol,fcol)=>{
+const j8_ofRect=(x:number,y:number,w:number,h:number,ocol:any,fcol:any)=>{
     j8_mainWindow.lineWidth=j8_lineWidth;
     j8_mainWindow.fillStyle=fcol;
     j8_mainWindow.strokeStyle=ocol;
@@ -79,11 +79,11 @@ const j8_ofRect=(x,y,w,h,ocol,fcol)=>{
     j8_mainWindow.stroke();
 }
 
-const j8_clearRect=(x,y,w,h)=>{
+const j8_clearRect=(x:number,y:number,w:number,h:number)=>{
     j8_mainWindow.clearRect(x,y,w,h);
 };
 
-const j8_arc=(x,y,r,sA,eA,col)=>{
+const j8_arc=(x:number,y:number,r:number,sA:number,eA:number,col:any)=>{
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.lineWidth=j8_lineWidth;
     j8_mainWindow.beginPath();
@@ -91,18 +91,18 @@ const j8_arc=(x,y,r,sA,eA,col)=>{
     j8_mainWindow.stroke();
 };
 
-const j8_lineCircle=(x,y,r,col)=>{
+const j8_lineCircle=(x:number,y:number,r:number,col:any)=>{
     j8_arc(x,y,r,0,2*Math.PI,col);
 };
 
-const j8_fillCircle=(x,y,r,col)=>{
+const j8_fillCircle=(x:number,y:number,r:number,col:any)=>{
     j8_mainWindow.fillStyle=col;
     j8_mainWindow.beginPath();
     j8_mainWindow.arc(x,y,r,0,2*Math.PI);
     j8_mainWindow.fill();
 };
 
-const j8_ofCircle=(x,y,r,ocol,fcol)=>{
+const j8_ofCircle=(x:number,y:number,r:number,ocol:any,fcol:any)=>{
     j8_mainWindow.lineWidth=j8_lineWidth;
     j8_mainWindow.strokeStyle=ocol;
     j8_mainWindow.fillStyle=fcol;
@@ -112,7 +112,7 @@ const j8_ofCircle=(x,y,r,ocol,fcol)=>{
     j8_mainWindow.stroke();
 };
 
-const j8_line=(x,y,ex,ey,col)=>{
+const j8_line=(x:number,y:number,ex:number,ey:number,col:any)=>{
     j8_mainWindow.lineWidth=j8_lineWidth;
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.beginPath();
@@ -121,20 +121,27 @@ const j8_line=(x,y,ex,ey,col)=>{
     j8_mainWindow.stroke();
 };
 
-const j8_setLoopFunction=(func,rate)=>{
+const j8_setLoopFunction=(func:any,rate:number)=>{
     setInterval(func,rate);
 };
 
-const j8_setBGColor=(col)=>{
+const j8_setBGColor=(col:any)=>{
     j8_mainWindow.fillStyle=col;
     j8_mainWindow.beginPath();
     j8_mainWindow.fillRect(0,0,256,240);
 };
 
-const j8_drawText=(x,y,font,col,text)=>{
+const j8_lineText=(x:number,y:number,font:any,col:any,text:string)=>{
     j8_mainWindow.font=font;
     j8_mainWindow.strokeStyle=col;
     j8_mainWindow.lineWidth=j8_lineWidth;
     j8_mainWindow.beginPath();
     j8_mainWindow.strokeText(text,x,y);
 };
+
+const j8_fillText=(x:number,y:number,font:any,col:any,text:string)=>{
+    j8_mainWindow.font=font;
+    j8_mainWindow.fillStyle=col;
+    j8_mainWindow.beginPath();
+    j8_mainWindow.fillText(text,x,y);
+}
