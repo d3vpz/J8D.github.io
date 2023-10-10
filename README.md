@@ -1,4 +1,5 @@
 # J8D
+<img src="./assets/images/j8d.svg">
 A small JavaScript library to help others make 8-bit styled games.  
 You can check out the demo [here](https://d3vpz.github.io/J8D.github.io/).
 
