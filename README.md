@@ -14,4 +14,6 @@ Access the docs <a href="./Docs.md">here.</a>
 ## V1.0 Release
 * Initial Release
 ## V1.01
-* Added `j8_fillText()` method
+* Added `j8_fillText();` method
+## V1.02
+* Added `j8_drawImage();` method
