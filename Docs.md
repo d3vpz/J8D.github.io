@@ -187,6 +187,64 @@ j8_lineText(0,0,"15px Arial","black","Hello World!");
 ```
 Reload the page and you should now have "Hello World!" being displayed on your screen.
 
+# Section V - Loops
+Many programs have loops inside of them. Games have loops, websites have loops, even loops may have loops. Now, how would you make a loop in JavaScript? Well, you would use the tedious and complicated `setInterval();` method. Thankfully, J8D makes it much simpler and faster to do.
+
+With J8D, you can use the `j8_setLoopFunction();` Instead.
+This function has 2 parameters:
+```
+func - the function that loops
+rate - the amount of milliseconds between calling the function
+```
+Lets create the program. Start off with our base script:
+``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+```
+Before we create our loop, lets create an x variable that changes over time to show if our loop works or not.Add this line of code at the bottom of the file:
+``` javascript
+let x=0;
+```
+Now that we have our variable, lets make our loop function to be called. Add this line of code at the bottom of the file:
+``` javascript
+function mainLoop() {
+    //code will go here
+}
+```
+Lets call our function with the `j8_setLoopFunction();` method:
+``` javascript
+j8_setLoopFunction(mainLoop,10);
+```
+This calls our loop function every 10 milliseconds. I highly reccommend that you do not set the rate to anything below 10 milliseconds. This can cause lag depending on how much is in the function.
+
+Lets add our code to our loop function. Add these lines of code into of the function:
+``` javascript
+j8_clearRect(0,0,256,240); // Clears the screen
+j8_fillRect(x,50,50,50,"red"); // Draws filled rectangle
+x+=1; // increases the x by 1
+```
+Your code should look like this:
+``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+
+let x=0;
+
+function mainLoop() {
+    j8_clearRect(0,0,256,240); // Clears the screen
+    j8_fillRect(x,50,50,50,"red"); // Draws filled rectangle
+    x+=1; // increases the x by 1
+}
+
+j8_setLoopFunction(mainLoop,10);
+
+If you reload the page, you should see the rectangle sliding right across the canvas.
+```
+
 # Extra Sections
 ## Crystals
 You can make modified versions of the library called "crystals". Crystals allow for more additions to the library that haven't been added yet. I currently have no guide for making crystals, but I can give a general overview. Basically, what you do is modify the `lib.ts` file in the `j8d_lib` directory to add new functions and variables.
