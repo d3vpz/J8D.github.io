@@ -129,15 +129,21 @@ const j8_line=(x:number,y:number,ex:number,ey:number,col:any)=>{
     j8_mainWindow.stroke();
 };
 
+// Loops
+
 const j8_setLoopFunction=(func:any,rate:number)=>{
     setInterval(func,rate);
 };
+
+// Background
 
 const j8_setBGColor=(col:any)=>{
     j8_mainWindow.fillStyle=col;
     j8_mainWindow.beginPath();
     j8_mainWindow.fillRect(0,0,256,240);
 };
+
+// Text
 
 const j8_lineText=(x:number,y:number,font:any,col:any,text:string)=>{
     j8_mainWindow.font=font;

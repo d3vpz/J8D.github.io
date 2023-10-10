@@ -117,6 +117,18 @@ j8_lineWidth=4;
 ```
 This sets the line width of what we draw to 4 pixels. If you reload the page, you should see a thicker outline on the rectangle.
 
+Your end result should look like this.
+
+``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+
+j8_lineWidth=4;
+j8_lineRect(0,0,50,50,"red");
+```
+
 Congratulations! You now know basic shape drawing with J8D. Let's move on to the next part.
 
 ## Drawing Other Shapes
@@ -137,6 +149,43 @@ There is 3 methods for drawing circles:
 ### Arcs
 There is one method for drawing an arc:<br>
 `j8_arc(x,y,r,sA,eA,col);`
+### Points
+There is one method for plotting points:<br>
+`j8_plot(x,y,col);`
+
+# Section IV - Hello World!
+You may be thinking, "Why is the fourth section just introducing hello world?" Our version of the hello world program will involve writing the text on the canvas instead.
+
+Start off by deleting the last two lines of your code. Your code should now look like this.
+```javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+```
+Now, lets add some text to our screen. We'll use the function `j8_lineText();`.<br>
+This function has 5 parameters:
+```
+x - x position of the text
+y - y position of the text
+font - text font
+col - color of the text
+text - what the text says
+```
+Write this line of code at the bottom of your file:
+```javascript
+j8_lineText(0,0,"15px Arial","black","Hello World!");
+```
+Your file should now look like this:
+```javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
+
+j8_mainWindow=ctx;
+
+j8_lineText(0,0,"15px Arial","black","Hello World!");
+```
+Reload the page and you should now have "Hello World!" being displayed on your screen.
 
 # Extra Sections
 ## Crystals
