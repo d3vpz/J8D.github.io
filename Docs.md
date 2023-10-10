@@ -241,9 +241,9 @@ function mainLoop() {
 }
 
 j8_setLoopFunction(mainLoop,10);
+```
 
 If you reload the page, you should see the rectangle sliding right across the canvas.
-```
 
 # Extra Sections
 ## Crystals
