@@ -159,3 +159,16 @@ const j8_fillText=(x:number,y:number,font:any,col:any,text:string)=>{
     j8_mainWindow.beginPath();
     j8_mainWindow.fillText(text,x,y);
 };
+
+const j8_drawImage=(x,y,path:string)=>{
+    const img = new Image();
+    img.addEventListener(
+        "load",
+        ()=>{
+            j8_mainWindow.beginPath();
+            j8_mainWindow.drawImage(img,x,y);
+        },
+        false
+    );
+    img.src=path;
+};
