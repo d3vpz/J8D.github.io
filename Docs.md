@@ -15,7 +15,9 @@ Here is what you will need on your journey:
 
 If you are ready, let's continue!
 
-# Section I - Setting Up J8D
+# The Basics
+
+## Section I - Setting Up J8D
 
 To install J8D, please follow the directions below:
 
@@ -30,15 +32,15 @@ Now, open the `main.js` file in your newley created folder.<br>
 
 J8D is now installed and ready to be used. Let's move on to the next section.
 
-# Section II - Syntax
-## Basic Syntax
+## Section II - Syntax
+### Basic Syntax
 All J8D variables and functions begin with the `j8` prefix. This is used to give immediate access to all functions and variables so required research is at a minimum.
-### Functions
+#### Functions
 All function parameters in J8D have semi-strict types. Inputs like objects or lists are usually put in the `any` type.
 
 That is really all you need to know about J8D syntax. It's pretty simple. Let's move on.
 
-# Section III - Writing Our First Program
+## Section III - Writing Our First Program
 
 Let's get to writing our programs! You should have your `main.js` file opened in a code or text editor of your choice.
 
@@ -96,7 +98,7 @@ const ctx = canvas.getContext('2d');
 ```
 Lastly, we have `j8_mainWindow=ctx;`. This sets the main window of the J8D library to our `ctx` variable so the library knows what surface to draw on.
 
-## Drawing a Rectangle
+### Drawing a Rectangle
 
 Let's draw a rectangle outline on our canvas. J8D makes this a lot simpler and less tedious to do.
 
@@ -131,29 +133,29 @@ j8_lineRect(0,0,50,50,"red");
 
 Congratulations! You now know basic shape drawing with J8D. Let's move on to the next part.
 
-## Drawing Other Shapes
-### Rectangles
+### Drawing Other Shapes
+#### Rectangles
 There are 4 methods for drawing rectangles:
 1. `j8_lineRect(x,y,w,h,col);` <- Rectangle outline
 3. `j8_fillRect(x,y,w,h,col);` <- Filled rectangle
 4. `j8_ofRect(x,y,w,h,ocol,fcol);` <- Filled rectangle with outline
 5. `j8_clearRect(x,y,w,h);` <- Creates a rectangle that clears all elements inside of it
-### Lines
+#### Lines
 There is one method for drawing a line:<br>
 `j8_line(x,y,ex,ey,col);`
-### Circles
+#### Circles
 There is 3 methods for drawing circles:
 1. `j8_lineCircle(x,y,r,col);` <- Circle outline
 2. `j8_fillCircle(x,y,r,col);` <- Filled circle
 3. `j8_ofCircle(x,y,r,ocol,fcol);` <- Filled circle with outline
-### Arcs
+#### Arcs
 There is one method for drawing an arc:<br>
 `j8_arc(x,y,r,sA,eA,col);`
-### Points
+#### Points
 There is one method for plotting points:<br>
 `j8_plot(x,y,col);`
 
-# Section IV - Hello World!
+## Section IV - Hello World!
 You may be thinking, "Why is the fourth section just introducing hello world?" Our version of the hello world program will involve writing the text on the canvas instead.
 
 Start off by deleting the last two lines of your code. Your code should now look like this.
@@ -187,7 +189,7 @@ j8_lineText(0,0,"15px Arial","black","Hello World!");
 ```
 Reload the page and you should now have "Hello World!" being displayed on your screen.
 
-# Section V - Loops
+## Section V - Loops
 Many programs have loops inside of them. Games have loops, websites have loops, even loops may have loops. Now, how would you make a loop in JavaScript? Well, you would use the tedious and complicated `setInterval();` method. Thankfully, J8D makes it much simpler and faster to do.
 
 With J8D, you can use the `j8_setLoopFunction();` Instead.
@@ -210,7 +212,7 @@ let x=0;
 Now that we have our variable, lets make our loop function to be called. Add this line of code at the bottom of the file:
 ``` javascript
 function mainLoop() {
-    //code will go here
+    // code will go here
 }
 ```
 Lets call our function with the `j8_setLoopFunction();` method:
@@ -227,6 +229,33 @@ x+=1; // increases the x by 1
 ```
 Your code should look like this:
 ``` javascript
+    const canvas = document.getElementById("mainWindow");
+    const ctx = canvas.getContext('2d');
+
+    j8_mainWindow=ctx;
+
+    let x=0;
+
+    function mainLoop() {
+        j8_clearRect(0,0,256,240); // Clears the screen
+        j8_fillRect(x,50,50,50,"red"); // Draws filled rectangle
+        x+=1; // increases the x by 1
+    }
+
+    j8_setLoopFunction(mainLoop,10);
+```
+
+If you reload the page, you should see the rectangle sliding right across the canvas.
+
+## Section VI - Keyboard Input
+We will now move on to keyboard input. Instead of using a function, J8D uses if statements to detect keyboard input. For example, here is how you would detect keyboard input:
+``` javascript
+if (j8_keys.a) {
+    // code goes here
+}
+```
+This detects if the value of the "a" key on our keyboard is set to true(pressed). Add this code into your function. Make sure to delete the `x+=1;` statement. Your code should now look like this:
+``` javascript
 const canvas = document.getElementById("mainWindow");
 const ctx = canvas.getContext('2d');
 
@@ -237,13 +266,40 @@ let x=0;
 function mainLoop() {
     j8_clearRect(0,0,256,240); // Clears the screen
     j8_fillRect(x,50,50,50,"red"); // Draws filled rectangle
-    x+=1; // increases the x by 1
+
+    if (j8_keys.a) {
+        // code goes here
+    }
 }
 
 j8_setLoopFunction(mainLoop,10);
 ```
+Now add the `x+=1;` statement into the if statement:
+``` javascript
+const canvas = document.getElementById("mainWindow");
+const ctx = canvas.getContext('2d');
 
-If you reload the page, you should see the rectangle sliding right across the canvas.
+j8_mainWindow=ctx;
+
+let x=0;
+
+function mainLoop() {
+    j8_clearRect(0,0,256,240); // Clears the screen
+    j8_fillRect(x,50,50,50,"red"); // Draws filled rectangle
+
+    if (j8_keys.a) {
+        x+=1;
+    }
+}
+
+j8_setLoopFunction(mainLoop,10);
+```
+When you reload the page, you should now be able to move the cube right with the "a" key.
+
+Congradulations! You are now done with the basics of J8D! If you'd like, you may move on to more advanced programming.
+
+# Advanced
+Under construction
 
 # Extra Sections
 ## Crystals
