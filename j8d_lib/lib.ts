@@ -158,4 +158,4 @@ const j8_fillText=(x:number,y:number,font:any,col:any,text:string)=>{
     j8_mainWindow.fillStyle=col;
     j8_mainWindow.beginPath();
     j8_mainWindow.fillText(text,x,y);
-}
+};

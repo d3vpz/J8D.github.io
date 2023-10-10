@@ -1,3 +1,5 @@
+window.onload = function () {
+
 const canvas = document.getElementById("mainWindow");
 const ctx = canvas.getContext('2d');
 
@@ -24,6 +26,8 @@ function loop() {
     if(j8_keys.ArrowRight){
         x+=1;
     }
+}
+
 }
 
 j8_setLoopFunction(loop,10);
